@@ -1,0 +1,8 @@
+<!-- Provide the page title -->
+<% provide(:page_title, 'All Posts') %>
+<!-- put the word active where we yield blog_active -->
+<% provide(:blog_active, 'active') %>
+
+<div class="row">
+  <%= render @posts %>
+</div>

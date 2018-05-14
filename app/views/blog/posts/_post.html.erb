@@ -1,0 +1,22 @@
+<!-- 
+Partial that is read from the index of the posts 
+post can be called without the @, since it inherits from the loop from index.html.erb	
+-->
+<div class='col-sm-6 col-lg-4'>
+	<div class="card">
+		<div class="card-topper" style='background-image: url(<%= post.banner_image_url %>);'>
+		</div>
+		<div class="card-block">
+			<h4 class="card-title">
+				<%= link_to post.title, post %>
+			</h4>
+			<p class="published-date">
+				<%= post.display_published_date %>
+			</p>
+			<p class="card-text">
+				<%= truncate(post.description, lenght:130) %>
+			</p>
+			<%= link_to 'Read', post, class: 'btn btn-read' %>
+		</div>
+	</div>
+</div>

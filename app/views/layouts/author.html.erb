@@ -1,0 +1,23 @@
+<!-- All the Author layouts are here since the application controller is split -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Pass the title of each blog entry to the page -->
+    <title><%= yield(:page_title) %> | Ewerton Ruiz</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- Render looks inside the views folder, and then follows the path -->
+    <%= render 'layouts/navbar' %>
+    <!-- erb code passes the name of the controller and the action that it is on --> 
+    <div class="container <%= controller_name %> <%= action_name %>">
+
+      <%= yield %>  
+    </div>
+    
+  </body>
+</html>
