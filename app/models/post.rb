@@ -2,6 +2,9 @@ class Post < ApplicationRecord
 	extend FriendlyId
   	friendly_id :title, use: :slugged
 
+    # Delete the optional after an Author is created
+    belongs_to :author, optional: true
+
   	# Take the itens we want and give it in a descending order
   	scope :most_recent, -> { order(id: :desc)}
 

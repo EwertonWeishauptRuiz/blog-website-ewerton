@@ -13,6 +13,9 @@
   <body>
     <!-- Render looks inside the views folder, and then follows the path -->
     <%= render 'layouts/navbar' %>
+    <!-- Ensure flash messages for devise -->
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <!-- erb code passes the name of the controller and the action that it is on --> 
     <div class="container <%= controller_name %> <%= action_name %>">
 

@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
 
+  devise_for :authors
   root to: 'blog/_posts#index'
 
   # /author/posts
-  namespace :author do
+  namespace :authors do
   	# Defining all the possible routes that matches controller actions in 
   	# the post controllers
   	resources :posts  	
